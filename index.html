@@ -6,258 +6,328 @@
 <title>South African Youth Council</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="styles/index.css">
-<style>
-
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
 <!-- Header -->
-<header class="sticky top-0 z-50">
-  <div class="bg-white/20 backdrop-blur-md border-b border-white/10">
+<header class="sticky top-0 z-50 shadow-sm">
+  <div class="bg-white/80 backdrop-blur-xl border-b border-black/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
 
         <!-- Logo -->
         <div class="flex items-center space-x-3">
-          <img src="images/SAYC-Lower-Resolution-Logo-150x150.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20">
-          <span class="hidden sm:block font-bold tracking-tight text-black">South African Youth Council</span>
+          <img
+            src="images/SAYC-Lower-Resolution-Logo-150x150.png"
+            alt="South African Youth Council Logo"
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-black/10 transition-transform duration-300 hover:scale-110"
+          />
+          <span class="hidden sm:block font-semibold tracking-tight text-gray-900 text-sm sm:text-base transition-colors duration-300 hover:text-green-500">
+            South African Youth Council
+          </span>
         </div>
 
-        <!-- Nav -->
-        <nav class="hidden md:flex items-center space-x-6 text-sm">
-          <a href="#" class="text-black font-medium">Home</a>
-          <a href="#" class="text-black/70 hover:text-black transition">About</a>
-          <a href="#" class="text-black/70 hover:text-black transition">Services</a>
-          <a href="#" class="text-black/70 hover:text-black transition">Partners & Representation</a>
-          <a href="#" class="text-black/70 hover:text-black transition">Contact</a>
-          <a href="#">
-            <button class="px-5 py-2 rounded-full bg-accent-yellow text-black hover:shadow-lg transition">Login</button>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center space-x-4 lg:space-x-6 text-sm sm:text-base font-medium">
+          <a href="#home" class="nav-link text-gray-900 relative group">
+            Home
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
           </a>
+          <a href="#about" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
+            About
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#services" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
+            Services
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#partners" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
+            Partners
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#contact" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
+            Contact
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
+          </a>
+
+          <a href="https://sayc.org.za/login/">
+            <button
+              class="ml-2 md:ml-6 lg:ml-8 px-3 sm:px-5 md:px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-500 hover:scale-105 transition shadow-sm text-sm sm:text-base md:text-base lg:text-lg"
+            >
+              Login
+            </button>
+          </a>
+
         </nav>
 
-        <!-- Mobile Menu -->
-        <div class="md:hidden">
-          <button id="mobileMenuBtn" class="text-black/80 hover:text-black transition">☰</button>
-        </div>
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobileMenuBtn"
+          aria-label="Open Menu"
+          class="md:hidden text-gray-800 text-2xl focus:outline-none transition-transform hover:rotate-90"
+        >
+          ☰
+        </button>
       </div>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white/30 backdrop-blur-md border-t border-white/10">
-    <nav class="flex flex-col px-6 py-4 space-y-3 text-sm">
-      <a href="#" class="text-black">Home</a>
-      <a href="#" class="text-black/70 hover:text-black">About</a>
-      <a href="#" class="text-black/70 hover:text-black">Services</a>
-      <a href="#" class="text-black/70 hover:text-black transition">Partners & Representation</a>
-      <a href="#" class="text-black/70 hover:text-black">Contact</a>
+  <div
+    id="mobileMenu"
+    class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t border-black/5 transition-all duration-300"
+  >
+    <nav class="flex flex-col px-6 py-6 space-y-4 text-sm font-medium">
+      <a href="#home" class="mobile-link text-gray-900 hover:text-green-500 transition">Home</a>
+      <a href="#about" class="mobile-link text-gray-600 hover:text-green-500 transition">About</a>
+      <a href="#services" class="mobile-link text-gray-600 hover:text-green-500 transition">Services</a>
+      <a href="#partners" class="mobile-link text-gray-600 hover:text-green-500 transition">Partners & Representation</a>
+      <a href="#contact" class="mobile-link text-gray-600 hover:text-green-500 transition">Contact</a>
+
+      <a href="https://sayc.org.za/login/" class="pt-2">
+        <button class="w-full px-5 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-500 hover:scale-105 transition">
+          Login
+        </button>
+      </a>
     </nav>
   </div>
 </header>
 
 <!-- Hero Section -->
-<section class="hero container mx-auto grid md:grid-cols-2 gap-12 items-center py-32 px-6 relative overflow-hidden">
+<section id="home" class="relative w-full overflow-hidden py-20 md:py-32">
 
-  <!-- Text -->
-  <div class="space-y-8 z-10">
-
-    <h1 class="text-5xl md:text-6xl font-bold tracking-tight">
-      South African Youth Council
-    </h1>
-
-    <p class="text-lg text-black/70 max-w-xl leading-relaxed">
-      The South African Youth Council (SAYC) is built on an unwavering belief in the
-      transformative power of youth. We recognize young people not as future leaders
-      alone, but as active change-makers shaping South Africa today.
-    </p>
-
-    <!-- Vision / Mission / Objectives -->
-    <div class="grid gap-4">
-
-      <!-- Vision -->
-      <div class="glass p-6">
-        <h3 class="text-xl font-bold mb-2">Our Vision</h3>
-        <p class="text-black/70">
-          A united, empowered, and inclusive youth sector actively shaping South
-          Africa’s democratic, social, and economic development.
-        </p>
-      </div>
-
-      <!-- Mission -->
-      <div class="glass p-6">
-        <h3 class="text-xl font-bold mb-2">Our Mission</h3>
-        <p class="text-black/70">
-          To represent, empower, and mobilize young people through democratic
-          participation, advocacy, and strategic partnerships that advance youth
-          development and national progress.
-        </p>
-      </div>
-
-      <!-- Objectives -->
-      <div class="glass p-6">
-        <h3 class="text-xl font-bold mb-4">Our Objectives</h3>
-
-        <ul class="space-y-2 text-black/70 list-disc list-inside">
-          <li>Youth empowerment as active agents of change</li>
-          <li>Democratic representation of diverse youth voices</li>
-          <li>Non-partisan engagement with all political stakeholders</li>
-          <li>Inclusive participation across gender, culture, and ability</li>
-          <li>Accountability, transparency, and ethical leadership</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- CTA -->
-    <a href="#" class="btn inline-block mt-6">
-      Get Involved
-    </a>
+  <!-- Background overlay -->
+  <div class="absolute inset-0 -z-10">
+    <img
+      src="/images/engin-akyurt-VO2kz7KBNn8-unsplash.jpg"
+      alt="Our Services"
+      class="w-full h-full object-cover opacity-20"
+    />
+    <div class="absolute inset-0 bg-white/70"></div>
   </div>
 
-  <!-- Hero Image -->
-  <div class="relative z-10">
-    <img
-      src="/images/youth-day-2020-2.jpg"
-      alt="Youth Empowerment"
-      class="rounded-2xl w-full h-auto object-cover shadow-xl"
-    />
+  <div class="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-12">
+
+    <!-- Text -->
+    <div class="flex-1 space-y-6 text-center md:text-left">
+      <p class="text-base sm:text-lg md:text-xl text-black/70 max-w-2xl mx-auto md:mx-0 leading-relaxed animate-fadeIn delay-100">
+        The South African Youth Council (SAYC) is built on an unwavering belief in the
+        transformative power of youth. We recognize young people not as future leaders
+        alone, but as active change-makers shaping South Africa today.
+      </p>
+
+      <!-- Vision / Mission / Objectives -->
+      <div class="grid gap-4 mt-6">
+        <div class="glass p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition animate-fadeIn">
+          <h3 class="text-base sm:text-lg font-bold mb-2">Our Vision</h3>
+          <p class="text-black/70 text-sm sm:text-base">
+            A united, empowered, and inclusive youth sector actively shaping South
+            Africa’s democratic, social, and economic development.
+          </p>
+        </div>
+
+        <div class="glass p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition animate-fadeIn delay-100">
+          <h3 class="text-base sm:text-lg font-bold mb-2">Our Mission</h3>
+          <p class="text-black/70 text-sm sm:text-base">
+            To represent, empower, and mobilize young people through democratic
+            participation, advocacy, and strategic partnerships that advance youth
+            development and national progress.
+          </p>
+        </div>
+
+        <div class="glass p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition animate-fadeIn delay-200">
+          <h3 class="text-base sm:text-lg font-bold mb-2">Our Objectives</h3>
+          <ul class="space-y-1 text-black/70 text-sm sm:text-base list-disc list-inside">
+            <li>Youth empowerment as active agents of change</li>
+            <li>Democratic representation of diverse youth voices</li>
+            <li>Non-partisan engagement with all political stakeholders</li>
+            <li>Inclusive participation across gender, culture, and ability</li>
+            <li>Accountability, transparency, and ethical leadership</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <a href="#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-green-500 text-white hover:bg-green-600 shadow-lg hover:shadow-xl transition text-base sm:text-lg animate-fadeIn delay-300">
+        Get Involved
+      </a>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="flex-1 relative mt-10 md:mt-0 animate-fadeIn delay-400">
+      <img
+        src="/images/youth-day-2020-2.jpg"
+        alt="Youth Empowerment"
+        class="rounded-2xl w-full h-auto object-cover shadow-xl"
+      />
+    </div>
   </div>
 
   <!-- Floating blobs -->
-  <div class="absolute -top-10 -left-10 w-40 h-40 bg-green-400/30 rounded-full blur-3xl animate-float"></div>
-  <div class="absolute top-20 right-0 w-32 h-32 bg-yellow-400/30 rounded-full blur-3xl animate-float"></div>
-  <div class="absolute bottom-0 -right-10 w-48 h-48 bg-red-400/25 rounded-full blur-3xl animate-float"></div>
-  <div class="absolute bottom-20 left-10 w-36 h-36 bg-blue-500/25 rounded-full blur-3xl animate-float"></div>
+  <div class="absolute -top-10 -left-10 w-24 h-24 sm:w-40 sm:h-40 bg-green-400/30 rounded-full blur-3xl animate-float"></div>
+  <div class="absolute top-16 right-0 w-20 h-20 sm:w-32 sm:h-32 bg-yellow-400/30 rounded-full blur-3xl animate-float"></div>
+  <div class="absolute bottom-0 -right-8 w-28 h-28 sm:w-48 sm:h-48 bg-red-400/25 rounded-full blur-3xl animate-float"></div>
+  <div class="absolute bottom-16 left-8 w-20 h-20 sm:w-36 sm:h-36 bg-blue-500/25 rounded-full blur-3xl animate-float"></div>
 
 </section>
 
 <!-- About Us -->
-<section class="max-w-7xl mx-auto px-6 py-32">
-  <h2 class="text-4xl font-extrabold text-center mb-20">Who We Are</h2>
+<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-32">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 sm:mb-20">Who We Are</h2>
 
-  <div class="grid lg:grid-cols-2 gap-16 items-start">
+  <div class="grid lg:grid-cols-2 gap-12 sm:gap-16 items-start">
 
     <!-- LEFT: BACKGROUND -->
-    <div class="glass p-10 rounded-3xl space-y-6">
-      <h3 class="text-2xl font-bold">Our Background</h3>
+    <div class="glass p-6 sm:p-10 rounded-3xl space-y-6">
+      <h3 class="text-xl sm:text-2xl font-bold">Our Background</h3>
 
-      <p class="text-black/70 leading-relaxed">
+      <p class="text-black/70 text-sm sm:text-base leading-relaxed">
         The South African Youth Council (SAYC) emerged during a pivotal time
         in South Africa’s history, marking a major milestone in the journey
         toward democratic youth representation.
       </p>
 
-      <p class="text-black/70 leading-relaxed">
+      <p class="text-black/70 text-sm sm:text-base leading-relaxed">
         Established on August 20, 1997, just three years after the country’s
         first democratic elections, SAYC symbolizes the dawn of a new era
         for youth participation in national development.
       </p>
 
-      <p class="text-black/70 leading-relaxed">
+      <p class="text-black/70 text-sm sm:text-base leading-relaxed">
         Rooted in the youth movements of the apartheid era, SAYC was shaped
         by struggle, advocacy, and a deep belief that young people are not
         only leaders of tomorrow, but change-makers of today.
       </p>
     </div>
 
-    <!-- RIGHT: TIMELINE -->
-    <div class="relative">
+  <!-- Zig-Zag Timeline -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
 
-      <!-- Vertical Line -->
-      <div class="absolute left-4 top-0 bottom-0 w-[2px] bg-black/20"></div>
+    <!-- Vertical Line -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[3px] bg-black/20"></div>
 
-      <div class="space-y-14 pl-12">
+    <div class="space-y-16">
+      <!-- Timeline Item 1 - Left -->
+      <div class="relative flex flex-col md:flex-row md:items-center group">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-green-500 rounded-full border-2 border-white shadow-md transition-transform group-hover:scale-125"></span>
 
-        <!-- Item -->
-        <div class="relative">
-          <span class="absolute -left-[38px] top-2 w-4 h-4 bg-green-500 rounded-full"></span>
-          <div class="glass p-6 rounded-2xl">
-            <h4 class="font-bold">August 20, 1997</h4>
-            <p class="text-black/70 mt-2">
-              SAYC is officially launched, marking a new era in organized youth
-              representation.
+        <div class="md:w-1/2 md:pr-12 order-2 md:order-1">
+          <div class="glass p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-xl transition transform group-hover:-translate-y-1 duration-300">
+            <h4 class="font-bold text-lg sm:text-xl">August 20, 1997</h4>
+            <p class="text-black/70 mt-2 text-sm sm:text-base">
+              SAYC is officially launched, marking a new era in organized youth representation.
             </p>
           </div>
         </div>
 
-        <!-- Item -->
-        <div class="relative">
-          <span class="absolute -left-[38px] top-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
-          <div class="glass p-6 rounded-2xl">
-            <h4 class="font-bold">1998 – 1999</h4>
-            <p class="text-black/70 mt-2">
-              Provincial branches, including KwaZulu-Natal, are established,
-              building regional youth structures.
+        <div class="md:w-1/2 md:pl-12 order-1 md:order-2 hidden md:block"></div>
+      </div>
+
+      <!-- Timeline Item 2 - Right -->
+      <div class="relative flex flex-col md:flex-row md:items-center group">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-yellow-400 rounded-full border-2 border-white shadow-md transition-transform group-hover:scale-125"></span>
+
+        <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+          <div class="glass p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-xl transition transform group-hover:-translate-y-1 duration-300">
+            <h4 class="font-bold text-lg sm:text-xl">1998 – 1999</h4>
+            <p class="text-black/70 mt-2 text-sm sm:text-base">
+              Provincial branches, including KwaZulu-Natal, are established, building regional youth structures.
             </p>
           </div>
         </div>
 
-        <!-- Item -->
-        <div class="relative">
-          <span class="absolute -left-[38px] top-2 w-4 h-4 bg-blue-500 rounded-full"></span>
-          <div class="glass p-6 rounded-2xl">
-            <h4 class="font-bold">June 16, 2000</h4>
-            <p class="text-black/70 mt-2">
-              The first National Youth Day under democracy is celebrated with
-              SAYC playing a leading role.
+        <div class="md:w-1/2 md:pr-12 order-2 md:order-1 hidden md:block"></div>
+      </div>
+
+      <!-- Timeline Item 3 - Left -->
+      <div class="relative flex flex-col md:flex-row md:items-center group">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-blue-500 rounded-full border-2 border-white shadow-md transition-transform group-hover:scale-125"></span>
+
+        <div class="md:w-1/2 md:pr-12 order-2 md:order-1">
+          <div class="glass p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-xl transition transform group-hover:-translate-y-1 duration-300">
+            <h4 class="font-bold text-lg sm:text-xl">June 16, 2000</h4>
+            <p class="text-black/70 mt-2 text-sm sm:text-base">
+              The first National Youth Day under democracy is celebrated with SAYC playing a leading role.
             </p>
           </div>
         </div>
 
-        <!-- Item -->
-        <div class="relative">
-          <span class="absolute -left-[38px] top-2 w-4 h-4 bg-red-500 rounded-full"></span>
-          <div class="glass p-6 rounded-2xl">
-            <h4 class="font-bold">2008</h4>
-            <p class="text-black/70 mt-2">
-              A major organizational review strengthens effectiveness and
-              responsiveness.
+        <div class="md:w-1/2 md:pl-12 order-1 md:order-2 hidden md:block"></div>
+      </div>
+
+      <!-- Timeline Item 4 - Right -->
+      <div class="relative flex flex-col md:flex-row md:items-center group">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-red-500 rounded-full border-2 border-white shadow-md transition-transform group-hover:scale-125"></span>
+
+        <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+          <div class="glass p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-xl transition transform group-hover:-translate-y-1 duration-300">
+            <h4 class="font-bold text-lg sm:text-xl">2008</h4>
+            <p class="text-black/70 mt-2 text-sm sm:text-base">
+              A major organizational review strengthens effectiveness and responsiveness.
             </p>
           </div>
         </div>
 
-        <!-- Item -->
-        <div class="relative">
-          <span class="absolute -left-[38px] top-2 w-4 h-4 bg-green-500 rounded-full"></span>
-          <div class="glass p-6 rounded-2xl">
-            <h4 class="font-bold">2015</h4>
-            <p class="text-black/70 mt-2">
+        <div class="md:w-1/2 md:pr-12 order-2 md:order-1 hidden md:block"></div>
+      </div>
+
+      <!-- Timeline Item 5 - Left -->
+      <div class="relative flex flex-col md:flex-row md:items-center group">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-green-500 rounded-full border-2 border-white shadow-md transition-transform group-hover:scale-125"></span>
+
+        <div class="md:w-1/2 md:pr-12 order-2 md:order-1">
+          <div class="glass p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-xl transition transform group-hover:-translate-y-1 duration-300">
+            <h4 class="font-bold text-lg sm:text-xl">2015</h4>
+            <p class="text-black/70 mt-2 text-sm sm:text-base">
               SAYC aligns with the National Youth Policy 2015–2020.
             </p>
           </div>
         </div>
 
-        <!-- Item -->
-        <div class="relative">
-          <span class="absolute -left-[38px] top-2 w-4 h-4 bg-yellow-500 rounded-full"></span>
-          <div class="glass p-6 rounded-2xl">
-            <h4 class="font-bold">June 16, 2020</h4>
-            <p class="text-black/70 mt-2">
+        <div class="md:w-1/2 md:pl-12 order-1 md:order-2 hidden md:block"></div>
+      </div>
+
+      <!-- Timeline Item 6 - Right -->
+      <div class="relative flex flex-col md:flex-row md:items-center group">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-yellow-500 rounded-full border-2 border-white shadow-md transition-transform group-hover:scale-125"></span>
+
+        <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+          <div class="glass p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-xl transition transform group-hover:-translate-y-1 duration-300">
+            <h4 class="font-bold text-lg sm:text-xl">June 16, 2020</h4>
+            <p class="text-black/70 mt-2 text-sm sm:text-base">
               SAYC leads virtual Youth Day celebrations during COVID-19.
             </p>
           </div>
         </div>
 
-        <!-- Item -->
-        <div class="relative">
-          <span class="absolute -left-[38px] top-2 w-4 h-4 bg-blue-500 rounded-full"></span>
-          <div class="glass p-6 rounded-2xl">
-            <h4 class="font-bold">2020 – Present</h4>
-            <p class="text-black/70 mt-2">
-              Operating under the National Youth Policy 2020–2030, with a
-              focus on digital skills, entrepreneurship, and climate action.
+        <div class="md:w-1/2 md:pr-12 order-2 md:order-1 hidden md:block"></div>
+      </div>
+
+      <!-- Timeline Item 7 - Left -->
+      <div class="relative flex flex-col md:flex-row md:items-center group">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-blue-500 rounded-full border-2 border-white shadow-md transition-transform group-hover:scale-125"></span>
+
+        <div class="md:w-1/2 md:pr-12 order-2 md:order-1">
+          <div class="glass p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-xl transition transform group-hover:-translate-y-1 duration-300">
+            <h4 class="font-bold text-lg sm:text-xl">2020 – Present</h4>
+            <p class="text-black/70 mt-2 text-sm sm:text-base">
+              Operating under the National Youth Policy 2020–2030, with a focus on digital skills, entrepreneurship, and climate action.
             </p>
           </div>
         </div>
 
+        <div class="md:w-1/2 md:pl-12 order-1 md:order-2 hidden md:block"></div>
       </div>
+
     </div>
+  </div>
 
   </div>
 </section>
 
-<section class="relative py-32 px-6 overflow-hidden">
+<!-- Services -->
+<section id="services" class="relative py-20 md:py-32 px-4 sm:px-6 overflow-hidden">
 
   <!-- Background image -->
   <div class="absolute inset-0">
@@ -271,14 +341,11 @@
 
   <div class="relative max-w-7xl mx-auto z-10">
 
-    <!-- Section Header -->
-    <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-20">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 sm:mb-20">
       Our Services
     </h2>
 
-    <!-- Services Grid -->
-    <div class="grid md:grid-cols-3 gap-10">
-
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10">
       <!-- ADVOCACY -->
       <div class="glass p-8 space-y-6 hover:scale-[1.02] transition">
         <h3 class="text-2xl font-bold flex items-center gap-3">
@@ -387,17 +454,16 @@
       </div>
 
     </div>
-
   </div>
 
   <!-- Decorative blobs -->
-  <div class="absolute -top-10 -left-10 w-40 h-40 bg-green-400/30 rounded-full blur-3xl animate-float"></div>
-  <div class="absolute bottom-10 -right-10 w-48 h-48 bg-yellow-400/30 rounded-full blur-3xl animate-float"></div>
+  <div class="absolute -top-10 -left-10 w-32 h-32 bg-green-400/30 rounded-full blur-3xl animate-float"></div>
+  <div class="absolute bottom-10 -right-10 w-36 h-36 bg-yellow-400/30 rounded-full blur-3xl animate-float"></div>
 
 </section>
 
-<section class="max-w-7xl mx-auto px-6 py-32 space-y-20">
-
+<!-- Partners, Contact, Footer remain unchanged but add responsive paddings -->
+<section id="partners" class="max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-32 space-y-16 sm:space-y-20">
   <!-- Header -->
   <div class="text-center max-w-3xl mx-auto space-y-4">
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
@@ -413,57 +479,333 @@
 
   <!-- Collaborators -->
   <div class="space-y-10">
-    <h2 class="text-3xl font-bold text-center">Collaborators</h2>
+    <h2 class="text-3xl font-bold text-center">Collaborators & Representation</h2>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center">
       <!-- Logo -->
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/SA Gov.jpeg" alt="Partner Logo" class="h-12 object-contain">
+        <img src="/images/SA_Gov-removebg-preview.png" alt="Partner Logo" class="h-12 object-contain">
       </div>
 
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/partner-2.png" alt="Partner Logo" class="h-12 object-contain">
+        <img src="/images/African_Peer_Review_Mechanism-removebg-preview.png" alt="Partner Logo" class="h-12 object-contain">
       </div>
 
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/partner-3.png" alt="Partner Logo" class="h-12 object-contain">
+        <img src="/images/ECOSOCC.svg" alt="Partner Logo" class="h-12 object-contain">
       </div>
 
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/partner-4.png" alt="Partner Logo" class="h-12 object-contain">
+        <img src="/images/PAYU-removebg-preview.png" alt="Partner Logo" class="h-12 object-contain">
       </div>
 
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/partner-5.png" alt="Partner Logo" class="h-12 object-contain">
+        <img src="/images/SANAC-Logo-44_07253e55b7ca164b8d0056b8f5e17f5d-removebg-preview.png" alt="Partner Logo" class="h-12 object-contain">
       </div>
     </div>
   </div>
 
   <!-- Representation -->
   <div class="space-y-10">
-    <h2 class="text-3xl font-bold text-center">Representation</h2>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center">
       <!-- Logo -->
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/representation-1.png" alt="Institution Logo" class="h-14 object-contain">
+        <img src="/images/id31va73x7_logos.png" alt="Institution Logo" class="h-14 object-contain">
       </div>
 
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/representation-2.png" alt="Institution Logo" class="h-14 object-contain">
+        <img src="/images/idbYPNWwYn_logos.png" alt="Institution Logo" class="h-14 object-contain">
       </div>
 
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/representation-3.png" alt="Institution Logo" class="h-14 object-contain">
+        <img src="/images/idiyfER5M3_logos.png" alt="Institution Logo" class="h-14 object-contain">
       </div>
 
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/representation-4.png" alt="Institution Logo" class="h-14 object-contain">
+        <img src="/images/idoAeOmV5M_logos-removebg-preview.png" alt="Institution Logo" class="h-14 object-contain">
       </div>
     </div>
   </div>
 
+    <div class="space-y-10">
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center">
+      <!-- Logo -->
+      <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
+        <img src="/images/idMFmzW8gQ_logos.png" alt="Institution Logo" class="h-14 object-contain">
+      </div>
+
+      <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
+        <img src="/images/images-removebg-preview.png" alt="Institution Logo" class="h-14 object-contain">
+      </div>
+    </div>
+  </div>
 </section>
 
+<section id="contact" class="relative py-20 md:py-32 px-4 sm:px-6">
+   <div class="absolute inset-0">
+    <img
+      src="/images/quino-al-4SNUcHPiC8c-unsplash.jpg"
+      alt="Contact US"
+      class="w-full h-full object-cover opacity-20"
+    />
+    <div class="absolute inset-0 bg-white/70"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+
+    <!-- LEFT: TEXT & REASONS -->
+    <div class="space-y-8 z-10">
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+        Contact Us
+      </h2>
+
+      <p class="text-lg text-black/70 leading-relaxed">
+        We're excited to hear from you! Your voice matters, and your input
+        is crucial in shaping the future of youth development.
+        Whether you have questions, ideas, or want to get involved,
+        contacting us is the first step towards making a difference.
+      </p>
+
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold">Why Reach Out?</h3>
+
+        <ul class="space-y-3 text-black/70">
+          <li class="flex gap-3">
+            <span class="text-green-500">✔</span>
+            Share your thoughts on youth issues
+          </li>
+          <li class="flex gap-3">
+            <span class="text-yellow-500">✔</span>
+            Learn about our programs and participation opportunities
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-500">✔</span>
+            Offer your skills or resources to support our initiatives
+          </li>
+          <li class="flex gap-3">
+            <span class="text-red-500">✔</span>
+            Collaborate on projects that empower young people
+          </li>
+          <li class="flex gap-3">
+            <span class="text-green-500">✔</span>
+            Get support or guidance on youth-related matters
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-black/70 italic">
+        Your message could be the spark that ignites positive change.
+        Don’t hesitate — let’s build a brighter future together.
+      </p>
+    </div>
+
+    <!-- RIGHT: CONTACT CARDS -->
+    <div class="space-y-8">
+
+      <!-- Contact Details -->
+      <div class="glass p-8 space-y-6">
+        <h3 class="text-2xl font-bold">Contact Details</h3>
+
+        <div class="space-y-4 text-black/70">
+          <div class="flex items-center gap-3">
+            <span class="text-blue-500 text-xl">✉</span>
+            <span>info@sayc.co.za</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-green-500 text-xl">📞</span>
+            <span>087 088 7858</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-green-600 text-xl">💬</span>
+            <span>+27 78 165 1610 (WhatsApp)</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-yellow-500 text-xl">🌐</span>
+            <span>www.sayc.co.za</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-black text-xl">📸</span>
+            <span>@saycnational</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banking Details -->
+      <div class="glass p-8 space-y-4">
+        <h3 class="text-2xl font-bold">Banking Details</h3>
+
+        <div class="text-black/70 space-y-2 text-sm">
+          <p><strong>Bank:</strong> FNB Bank</p>
+          <p><strong>Account Name:</strong> SAYC National (NPO)</p>
+          <p><strong>Account Number:</strong> XXX XXXX XXXX</p>
+          <p><strong>Branch Code:</strong> 250 655</p>
+        </div>
+
+        <div class="pt-4 border-t border-white/20 text-sm text-black/60">
+          Account holder name: <strong>SAYC KZN (NPO)</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Floating color blobs -->
+  <div class="absolute top-10 left-10 w-40 h-40 bg-green-400/30 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 right-10 w-48 h-48 bg-yellow-400/30 blur-3xl rounded-full"></div>
+</section>
+
+<footer class="relative mt-32 px-4 sm:px-6">
+  <!-- Curved Top Shape -->
+  <svg
+    viewBox="0 0 1440 120"
+    class="absolute top-0 left-0 w-full -translate-y-full"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="M0,64 C240,0 480,120 720,96 960,72 1200,0 1440,32 L1440,0 L0,0 Z"
+      fill="rgba(255,255,255,0.25)"
+    />
+  </svg>
+
+  <!-- Footer Body -->
+  <div class="bg-white/30 backdrop-blur-xl border-t border-white/20">
+    <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-4 gap-12">
+
+      <!-- Brand -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <img
+            src="/images/SAYC-Lower-Resolution-Logo-150x150.png"
+            class="w-12 h-12 rounded-full border border-white/30"
+            alt="SAYC Logo"
+          />
+          <h3 class="font-bold text-lg">South African Youth Council</h3>
+        </div>
+
+        <p class="text-sm text-black/70 leading-relaxed">
+          Empowering youth as leaders, stakeholders, and change-makers
+          in South Africa’s democratic and economic future.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-black/70">
+          <li><a href="#" class="hover:text-black transition">Home</a></li>
+          <li><a href="#" class="hover:text-black transition">About Us</a></li>
+          <li><a href="#" class="hover:text-black transition">Programs</a></li>
+          <li><a href="#" class="hover:text-black transition">Partnerships</a></li>
+          <li><a href="#" class="hover:text-black transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Involved -->
+      <div>
+        <h4 class="font-semibold mb-4">Get Involved</h4>
+        <ul class="space-y-2 text-sm text-black/70">
+          <li>Volunteer</li>
+          <li>Become a Partner</li>
+          <li>Youth Membership</li>
+          <li>Donations</li>
+          <li>Events & Campaigns</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <ul class="space-y-3 text-sm text-black/70">
+          <li class="flex gap-2 items-center">
+            ✉ info@sayc.co.za
+          </li>
+          <li class="flex gap-2 items-center">
+            📞 087 088 7858
+          </li>
+          <li class="flex gap-2 items-center">
+            💬 +27 78 165 1610
+          </li>
+          <li class="flex gap-2 items-center">
+            🌐 www.sayc.co.za
+          </li>
+        </ul>
+
+        <!-- Social -->
+          <div class="flex gap-4 mt-6">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/p/South-African-Youth-Council-61558489670387/" aria-label="Facebook"
+              class="social-icon bg-blue-600 hover:bg-blue-700">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://x.com/SAYC_ZA" aria-label="Twitter"
+              class="social-icon bg-sky-500 hover:bg-sky-600">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/south_african_youth_council/" aria-label="Instagram"
+              class="social-icon instagram-gradient">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- YouTube -->
+            <!--<a href="#" aria-label="YouTube"
+              class="social-icon bg-red-600 hover:bg-red-700">
+              <i class="fa-brands fa-youtube"></i>
+            </a>-->
+          </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/20 py-6">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-black/60">
+        <p>
+          © <span id="year"></span> South African Youth Council. All rights reserved.
+        </p>
+
+        <p class="text-center">
+          Registered NPO • Youth Representation • Non-Partisan
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenuBtn.classList.toggle('text-green-500');
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      mobileMenuBtn.classList.remove('text-green-500');
+    });
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
