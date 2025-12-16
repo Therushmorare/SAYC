@@ -6,7 +6,7 @@
 <title>South African Youth Council</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="styles/index.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="icon" type="image/png" href="/images/SAYC-Lower-Resolution-Logo-150x150.png">
 </head>
 <body>
 
@@ -16,16 +16,25 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
 
-        <!-- Logo -->
+        <!-- Logo + Title -->
         <div class="flex items-center space-x-3">
           <img
             src="images/SAYC-Lower-Resolution-Logo-150x150.png"
             alt="South African Youth Council Logo"
             class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-black/10 transition-transform duration-300 hover:scale-110"
           />
-          <span class="hidden sm:block font-semibold tracking-tight text-gray-900 text-sm sm:text-base transition-colors duration-300 hover:text-green-500">
-            South African Youth Council
-          </span>
+
+          <div class="leading-tight">
+            <!-- Mobile title -->
+            <span class="block sm:hidden font-semibold tracking-tight text-gray-900 text-sm">
+              SAYC
+            </span>
+
+            <!-- Desktop title -->
+            <span class="hidden sm:block font-semibold tracking-tight text-gray-900 text-sm sm:text-base transition-colors duration-300 hover:text-green-500">
+              South African Youth Council
+            </span>
+          </div>
         </div>
 
         <!-- Desktop Nav -->
@@ -34,18 +43,27 @@
             Home
             <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
           </a>
+
           <a href="#about" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
             About
             <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
           </a>
+
+          <a href="#structure" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
+            Structure
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
+          </a>
+
           <a href="#services" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
             Services
             <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
           </a>
+
           <a href="#partners" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
             Partners
             <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
           </a>
+
           <a href="#contact" class="nav-link text-gray-600 relative group hover:text-gray-900 transition">
             Contact
             <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full"></span>
@@ -53,22 +71,22 @@
 
           <a href="https://sayc.org.za/login/">
             <button
-              class="ml-2 md:ml-6 lg:ml-8 px-3 sm:px-5 md:px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-500 hover:scale-105 transition shadow-sm text-sm sm:text-base md:text-base lg:text-lg"
+              class="ml-2 md:ml-6 lg:ml-8 px-3 sm:px-5 md:px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-500 hover:scale-105 transition shadow-sm text-sm sm:text-base lg:text-lg"
             >
               Login
             </button>
           </a>
-
         </nav>
 
         <!-- Mobile Menu Button -->
         <button
           id="mobileMenuBtn"
           aria-label="Open Menu"
-          class="md:hidden text-gray-800 text-2xl focus:outline-none transition-transform hover:rotate-90"
+          class="md:hidden text-gray-800 text-2xl focus:outline-none transition-transform duration-300 hover:rotate-90"
         >
           ☰
         </button>
+
       </div>
     </div>
   </div>
@@ -81,8 +99,11 @@
     <nav class="flex flex-col px-6 py-6 space-y-4 text-sm font-medium">
       <a href="#home" class="mobile-link text-gray-900 hover:text-green-500 transition">Home</a>
       <a href="#about" class="mobile-link text-gray-600 hover:text-green-500 transition">About</a>
+      <a href="#structure" class="mobile-link text-gray-600 hover:text-green-500 transition">Structure</a>
       <a href="#services" class="mobile-link text-gray-600 hover:text-green-500 transition">Services</a>
-      <a href="#partners" class="mobile-link text-gray-600 hover:text-green-500 transition">Partners & Representation</a>
+      <a href="#partners" class="mobile-link text-gray-600 hover:text-green-500 transition">
+        Partners & Representation
+      </a>
       <a href="#contact" class="mobile-link text-gray-600 hover:text-green-500 transition">Contact</a>
 
       <a href="https://sayc.org.za/login/" class="pt-2">
@@ -95,8 +116,7 @@
 </header>
 
 <!-- Hero Section -->
-<section id="home" class="relative w-full overflow-hidden py-20 md:py-32">
-
+<section id="home" class="relative w-full overflow-hidden pt-12 pb-20 md:pt-16 md:pb-28">
   <!-- Background overlay -->
   <div class="absolute inset-0 -z-10">
     <img
@@ -108,6 +128,27 @@
   </div>
 
   <div class="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-12">
+
+    <!-- Hero Image -->
+    <div class="flex-1 relative mt-10 md:mt-0 animate-fadeIn delay-400">
+
+      <h2
+        class="relative text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight sa-flag-text drop-shadow-sm"
+      >
+        South African Youth Council
+
+        <!-- Accent underline -->
+        <span
+          class="absolute -bottom-3 left-0 w-24 h-1 bg-gradient-to-r from-green-700 via-yellow-400 to-red-600 rounded-full transition-all duration-500 hover:w-44"
+        ></span>
+      </h2>
+
+      <img
+        src="/images/youth-day-2020-2.jpg"
+        alt="Youth Empowerment"
+        class="mt-6 rounded-2xl w-full h-auto object-cover shadow-xl"
+      />
+    </div>
 
     <!-- Text -->
     <div class="flex-1 space-y-6 text-center md:text-left">
@@ -154,14 +195,6 @@
       </a>
     </div>
 
-    <!-- Hero Image -->
-    <div class="flex-1 relative mt-10 md:mt-0 animate-fadeIn delay-400">
-      <img
-        src="/images/youth-day-2020-2.jpg"
-        alt="Youth Empowerment"
-        class="rounded-2xl w-full h-auto object-cover shadow-xl"
-      />
-    </div>
   </div>
 
   <!-- Floating blobs -->
@@ -326,6 +359,115 @@
   </div>
 </section>
 
+<section id="structure" class="relative py-20 md:py-28 bg-white overflow-hidden">
+
+  <!-- Section Header -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 sm:mb-20">
+      Organizational Structure
+    </h2>
+
+    <p class="mt-4 max-w-3xl mx-auto text-black/70 text-base sm:text-lg">
+      SAYC’s structure is designed to ensure effective governance, inclusive representation,
+      and impactful youth development across all levels of society.
+    </p>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+    <!-- NEC -->
+    <div class="glass rounded-2xl p-6 border-t-4 border-green-600 hover:shadow-xl transition">
+      <span class="text-sm font-bold text-green-600">01</span>
+      <h3 class="mt-2 text-xl font-bold">National Executive Committee (NEC)</h3>
+      <p class="mt-3 text-black/70 text-sm sm:text-base">
+        The highest decision-making body responsible for overall strategic direction,
+        comprising elected youth leaders from regions across South Africa.
+      </p>
+    </div>
+
+    <!-- PEC -->
+    <div class="glass rounded-2xl p-6 border-t-4 border-yellow-400 hover:shadow-xl transition">
+      <span class="text-sm font-bold text-yellow-500">02</span>
+      <h3 class="mt-2 text-xl font-bold">Provincial Executive Committees (PEC)</h3>
+      <p class="mt-3 text-black/70 text-sm sm:text-base">
+        Comprised of 15 elected leaders per province, advocating for youth matters
+        and overseeing the implementation of provincial initiatives.
+      </p>
+    </div>
+
+    <!-- REC -->
+    <div class="glass rounded-2xl p-6 border-t-4 border-blue-600 hover:shadow-xl transition">
+      <span class="text-sm font-bold text-blue-600">03</span>
+      <h3 class="mt-2 text-xl font-bold">Regional Executive Committees (REC)</h3>
+      <p class="mt-3 text-black/70 text-sm sm:text-base">
+        Ten elected leaders representing districts, ensuring youth issues are addressed
+        and regional programmes are effectively implemented.
+      </p>
+    </div>
+
+    <!-- BEC -->
+    <div class="glass rounded-2xl p-6 border-t-4 border-red-600 hover:shadow-xl transition">
+      <span class="text-sm font-bold text-red-600">04</span>
+      <h3 class="mt-2 text-xl font-bold">Branches Executive Committee (BEC)</h3>
+      <p class="mt-3 text-black/70 text-sm sm:text-base">
+        The grassroots level of SAYC operating at local municipality level, serving as
+        the direct link between SAYC and communities.
+      </p>
+    </div>
+  </div>
+
+  <!-- AFFILIATED ORGANIZATIONS -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-24">
+
+    <h3 class="text-2xl sm:text-3xl font-bold text-center mb-12">
+      Types of Organizations Affiliated to SAYC
+    </h3>
+
+    <div class="grid gap-8 md:grid-cols-3">
+
+      <!-- Service-Based -->
+      <div class="glass rounded-2xl p-6 hover:shadow-xl transition">
+        <h4 class="text-xl font-bold text-green-700 mb-3">
+          Service-Based Organizations
+        </h4>
+        <p class="text-black/70 text-sm sm:text-base leading-relaxed">
+          Provide direct support and services addressing economic and social needs of youth.
+          Includes youth-owned entities, NPOs, NPCs, and private companies fostering
+          entrepreneurship and economic empowerment.
+        </p>
+      </div>
+
+      <!-- Issue-Based -->
+      <div class="glass rounded-2xl p-6 hover:shadow-xl transition">
+        <h4 class="text-xl font-bold text-yellow-600 mb-3">
+          Issue-Based Organizations
+        </h4>
+        <p class="text-black/70 text-sm sm:text-base leading-relaxed">
+          Operate under constitutional rights to freedom of expression and assembly,
+          advocating for youth-related social change through NGOs, NPOs, and CBOs.
+        </p>
+      </div>
+
+      <!-- Membership-Based -->
+      <div class="glass rounded-2xl p-6 hover:shadow-xl transition">
+        <h4 class="text-xl font-bold text-blue-700 mb-3">
+          Membership-Based Organizations
+        </h4>
+        <p class="text-black/70 text-sm sm:text-base leading-relaxed">
+          Enable collective participation through political youth formations, student
+          representative bodies, and democratic membership structures.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Decorative Blobs -->
+  <div class="absolute -top-10 -left-10 w-32 h-32 bg-green-400/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-10 right-0 w-40 h-40 bg-yellow-400/20 rounded-full blur-3xl"></div>
+
+</section>
+
 <!-- Services -->
 <section id="services" class="relative py-20 md:py-32 px-4 sm:px-6 overflow-hidden">
 
@@ -481,7 +623,7 @@
   <div class="space-y-10">
     <h2 class="text-3xl font-bold text-center">Collaborators & Representation</h2>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center">
       <!-- Logo -->
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
         <img src="/images/SA_Gov-removebg-preview.png" alt="Partner Logo" class="h-12 object-contain">
@@ -499,9 +641,6 @@
         <img src="/images/PAYU-removebg-preview.png" alt="Partner Logo" class="h-12 object-contain">
       </div>
 
-      <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
-        <img src="/images/SANAC-Logo-44_07253e55b7ca164b8d0056b8f5e17f5d-removebg-preview.png" alt="Partner Logo" class="h-12 object-contain">
-      </div>
     </div>
   </div>
 
@@ -539,6 +678,11 @@
       <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
         <img src="/images/images-removebg-preview.png" alt="Institution Logo" class="h-14 object-contain">
       </div>
+
+      <div class="glass p-6 flex items-center justify-center hover:scale-105 transition">
+        <img src="/images/SANAC-Logo-44_07253e55b7ca164b8d0056b8f5e17f5d-removebg-preview.png" alt="Partner Logo" class="h-12 object-contain">
+      </div>
+
     </div>
   </div>
 </section>
@@ -636,20 +780,44 @@
         </div>
       </div>
 
-      <!-- Banking Details -->
-      <div class="glass p-8 space-y-4">
-        <h3 class="text-2xl font-bold">Banking Details</h3>
+      <div class="glass p-8 rounded-2xl shadow-lg hover:shadow-xl transition relative">
+        <form action="/submit" method="POST" class="space-y-6">
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none transition"
+            />
+          </div>
 
-        <div class="text-black/70 space-y-2 text-sm">
-          <p><strong>Bank:</strong> FNB Bank</p>
-          <p><strong>Account Name:</strong> SAYC National (NPO)</p>
-          <p><strong>Account Number:</strong> XXX XXXX XXXX</p>
-          <p><strong>Branch Code:</strong> 250 655</p>
-        </div>
+          <!-- Comments -->
+          <div>
+            <label for="comments" class="block text-sm font-medium text-gray-700">Comments / Message</label>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              placeholder="Tell us how you'd like to get involved..."
+              required
+              class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none transition"
+            ></textarea>
+          </div>
 
-        <div class="pt-4 border-t border-white/20 text-sm text-black/60">
-          Account holder name: <strong>SAYC KZN (NPO)</strong>
-        </div>
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button
+              type="submit"
+              class="inline-block w-full sm:w-auto px-6 py-3 rounded-full bg-green-500 text-white font-medium hover:bg-green-600 hover:scale-105 transition shadow-md"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
 
     </div>

@@ -97,3 +97,24 @@
   .delay-200 { animation-delay: 0.2s; }
   .delay-300 { animation-delay: 0.3s; }
   .delay-400 { animation-delay: 0.4s; }
+
+  .sa-flag-text {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #000000 18%,
+    #007a4d 18%,
+    #007a4d 36%,
+    #ffffff 36%,
+    #ffffff 42%,
+    #ffb612 42%,
+    #ffb612 58%,
+    #de3831 58%,
+    #de3831 78%,
+    #002395 78%,
+    #002395 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
